@@ -1,0 +1,5 @@
+{
+    "base_url": "https://tmdb-discover.surge.sh/",
+    "timeout": 10,
+    "browser": "chrome"
+}
