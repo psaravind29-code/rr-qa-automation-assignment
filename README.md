@@ -100,4 +100,4 @@ While not implemented here, the approach for integrating this suite into a CI pi
 4.  **Parallel Execution:** To speed up feedback, tests would be split and run in parallel on multiple CI agents.
 
 ---
-**Developed by [Your Name] for Rapyuta Robotics.**
+**Developed by [Aravind P S] for Rapyuta Robotics.**

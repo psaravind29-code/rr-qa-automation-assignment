@@ -3,7 +3,7 @@ from src.pages.base_page import BasePage
 import time
 
 class DiscoverPage(BasePage):
-    # Locators (we'll find these in the next step)
+    # Locators (to find these in the next step)
     SEARCH_BOX = (By.CSS_SELECTOR, "input[placeholder='Search movies...']")
     CATEGORY_BUTTONS = (By.CSS_SELECTOR, ".categories button")
     MOVIE_CARDS = (By.CSS_SELECTOR, ".movie-card")
@@ -14,7 +14,7 @@ class DiscoverPage(BasePage):
         self.base_url = self.config["base_url"]
     
     def navigate_to(self):
-        """Navigate to the main page"""
+        """avigate to the main page"""
         self.driver.get(self.base_url)
         self.logger.info(f"Navigated to: {self.base_url}")
         time.sleep(2)  # Let page load
@@ -27,7 +27,7 @@ class DiscoverPage(BasePage):
     
     def select_category(self, category_name):
         """Select a category like Popular, Trending, etc."""
-        # This is a simplified version - we'll need to inspect the actual website
+        # This is a simplified version - so that if needed we can inspect the actual website
         categories = self.find_elements(self.CATEGORY_BUTTONS)
         for category in categories:
             if category_name.lower() in category.text.lower():
