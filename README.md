@@ -2,7 +2,7 @@
 
 This repository contains the automation test suite for the TMDB Discover demo website (https://tmdb-discover.surge.sh/), developed as part of the Rapyuta Robotics QA Automation Engineer application process.
 
-## 🚀 Overview
+##  Overview
 
 The project automates functional testing for the key features of the site:
 *   **Filtering & Search:** Categories, Titles, Type, Year, Rating, Genre.
@@ -11,7 +11,7 @@ The project automates functional testing for the key features of the site:
 
 The framework is built with a focus on **maintainability, clarity, and reporting**.
 
-## 🛠️ Tech Stack & Framework
+##  Tech Stack & Framework
 
 *   **Language:** Python 3.x
 *   **Test Framework:** Pytest
@@ -21,7 +21,7 @@ The framework is built with a focus on **maintainability, clarity, and reporting
 *   **Logging:** Custom Python logger
 *   **Patterns:** Page Object Model (POM)
 
-## 📋 Testing Strategy & Design
+##  Testing Strategy & Design
 
 A detailed breakdown of the test strategy, generated test cases, and the reasoning behind them can be found here:
 [**Test Strategy and Cases Document**](./docs/Test_Strategy_and_Cases.md)
@@ -31,7 +31,7 @@ Highlights:
 *   **Scope:** ~15-20 core automated test cases covering the main functionalities.
 *   **Why these cases?** They represent the most critical user journeys and high-risk areas based on the assignment description.
 
-## ▶️ How to Run the Tests
+##  How to Run the Tests
 
 ### Prerequisites
 1.  Python 3.8+ installed on your machine.
@@ -61,7 +61,7 @@ Highlights:
     ```
     This will open a detailed, interactive HTML report in your browser.
 
-## 🧩 Framework Explanation
+##  Framework Explanation
 
 ### Patterns Used
 *   **Page Object Model (POM):** All UI interactions are encapsulated within classes in the `src/pages/` directory. This separates test logic from page-specific code, making tests cleaner and more robust against UI changes.
@@ -70,7 +70,7 @@ Highlights:
 ### API & UI Integration
 *   The `api_client.py` utility is used to make direct API calls (e.g., to get the total number of movies from the backend). This allows for powerful assertions where we can compare UI data with source-of-truth API data.
 
-## 🐛 Defects Found
+##  Defects Found
 
 During test execution, the following issues were identified and documented:
 
@@ -84,7 +84,7 @@ During test execution, the following issues were identified and documented:
     *   **Steps to Reproduce:** Open a new browser tab and navigate to `https://tmdb-discover.surge.sh/popular`.
     *   **Evidence:** Automated in the `test_direct_slug_access` negative test case.
 
-## 🚀 CI/CD Integration Approach
+##  CI/CD Integration Approach
 
 While not implemented here, the approach for integrating this suite into a CI pipeline (e.g., Jenkins, GitLab CI, GitHub Actions) would be as follows:
 
