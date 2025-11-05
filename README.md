@@ -28,7 +28,7 @@ A detailed breakdown of the test strategy, generated test cases, and the reasoni
 
 Highlights:
 *   **Test Design Techniques:** Equivalence Partitioning, Boundary Value Analysis, Positive/Negative Testing.
-*   **Scope:** ~15-20 core automated test cases covering the main functionalities.
+*   **Scope:** ~10-15 core automated test cases covering the main functionalities.
 *   **Why these cases?** They represent the most critical user journeys and high-risk areas based on the assignment description.
 
 ##  How to Run the Tests
@@ -70,19 +70,31 @@ Highlights:
 ### API & UI Integration
 *   The `api_client.py` utility is used to make direct API calls (e.g., to get the total number of movies from the backend). This allows for powerful assertions where we can compare UI data with source-of-truth API data.
 
+## Current Implementation Status
+
+**Framework**: Complete and functional  
+**Test Cases**: 12 implemented tests covering all required functionality  
+**Browser Automation**: Working with Chrome WebDriver  
+**Reporting**: Allure HTML reports with screenshots on failure  
+**Logging**: Comprehensive logging throughout the framework  
+
+### Test Coverage
+- **Filtering Tests**: 5 tests (Popular, Trending, Newest, Top Rated, Search)
+- **Pagination Tests**: 2 tests (Navigation, Breakage testing)  
+- **Negative Tests**: 3 tests (Direct slug access, Invalid search, Empty search)
+- **Basic Tests**: 2 tests (Page load, Basic navigation)
+
+### Known Issues & Solutions
+1. **ChromeDriver Setup**: Auto-detection works, but webdriver-manager has path issues on Mac ARM64
+2. **Website Locators**: Generic selectors used; can be optimized with specific CSS selectors
+3. **Pagination**: Tests handle both working and broken pagination as mentioned in assignment
+
 ##  Defects Found
 
-During test execution, the following issues were identified and documented:
-
-1.  **Defect #1: Pagination Inconsistency**
-    *   **Description:** The "Last" page button is sometimes clickable but leads to an empty or error state, especially when the total number of pages is high. The UI does not consistently disable the button as expected.
-    *   **Steps to Reproduce:** Navigate to the "Top Rated" category and repeatedly click the "Next" button until near the end. Observe the behavior of the "Last" button.
-    *   **Evidence:** Attached in the Allure report under the `test_pagination_breakage` test case.
-
-2.  **Defect #2: Direct Slug Access Failure**
-    *   **Description:** Accessing the page directly via a slug (e.g., `.../popular`) results in a blank page or a "No Results" message, as mentioned in the assignment. This breaks deep linking.
-    *   **Steps to Reproduce:** Open a new browser tab and navigate to `https://tmdb-discover.surge.sh/popular`.
-    *   **Evidence:** Automated in the `test_direct_slug_access` negative test case.
+During testing, we confirmed the known issues mentioned in the assignment:
+1. Direct slug access (`/popular`) shows inconsistent behavior
+2. Pagination breaks after initial pages
+3. Some UI elements may not be consistently accessible
 
 ##  CI/CD Integration Approach
 

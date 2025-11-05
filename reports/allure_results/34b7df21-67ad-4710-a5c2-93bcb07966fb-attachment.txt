@@ -1,0 +1,21 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [/Users/aravindsridharan/.wdm/drivers/chromedriver/mac64/142.0.7444.59/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+[33mWARNING [0m src.browser_setup:browser_setup.py:35 WebDriver Manager failed: [Errno 8] Exec format error: '/Users/aravindsridharan/.wdm/drivers/chromedriver/mac64/142.0.7444.59/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+[33mWARNING [0m src.browser_setup:browser_setup.py:47 Homebrew installation failed: Message: Unable to locate or obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+[32mINFO    [0m src.browser_setup:browser_setup.py:52  Using auto-detected ChromeDriver
+[32mINFO    [0m conftest:conftest.py:17  WebDriver initialized successfully
+[32mINFO    [0m src.pages.discover_page:discover_page.py:24 Navigating to: https://tmdb-discover.surge.sh/
+[32mINFO    [0m test_pagination:test_pagination.py:12 Pagination test setup completed
+[32mINFO    [0m test_pagination:test_pagination.py:16 Testing pagination navigation
+[32mINFO    [0m src.pages.discover_page:discover_page.py:115 🎬 Found 27 potential movie elements
+[32mINFO    [0m test_pagination:test_pagination.py:20 Initial page shows 27 movies
+[32mINFO    [0m src.pages.discover_page:discover_page.py:124 Navigating to next page
+[32mINFO    [0m src.pages.discover_page:discover_page.py:133 Successfully clicked next page
+[32mINFO    [0m src.pages.discover_page:discover_page.py:115 🎬 Found 27 potential movie elements
+[32mINFO    [0m test_pagination:test_pagination.py:26 Next page shows 27 movies
+[32mINFO    [0m src.pages.discover_page:discover_page.py:165 📸 Screenshot saved: reports/pagination_test.png
+[32mINFO    [0m test_pagination:test_pagination.py:30  Pagination navigation test completed
+[32mINFO    [0m conftest:conftest.py:25  WebDriver closed

@@ -1,0 +1,21 @@
+[1m[31mERROR   [0m src.pages.discover_page:discover_page.py:96 Category selection failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+0   chromedriver                        0x00000001030633b8 cxxbridge1$str$ptr + 2941356
+1   chromedriver                        0x000000010305b074 cxxbridge1$str$ptr + 2907752
+2   chromedriver                        0x0000000102b722c4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74028
+3   chromedriver                        0x0000000102b4bd08 chromedriver + 146696
+4   chromedriver                        0x0000000102be1c48 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 531120
+5   chromedriver                        0x0000000102bfa8e4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 632652
+6   chromedriver                        0x0000000102badf18 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318848
+7   chromedriver                        0x00000001030257fc cxxbridge1$str$ptr + 2688496
+8   chromedriver                        0x0000000103029018 cxxbridge1$str$ptr + 2702860
+9   chromedriver                        0x0000000103006614 cxxbridge1$str$ptr + 2561032
+10  chromedriver                        0x00000001030298f0 cxxbridge1$str$ptr + 2705124
+11  chromedriver                        0x0000000102ff7eb4 cxxbridge1$str$ptr + 2501800
+12  chromedriver                        0x0000000103049a20 cxxbridge1$str$ptr + 2836500
+13  chromedriver                        0x0000000103049ba4 cxxbridge1$str$ptr + 2836888
+14  chromedriver                        0x000000010305acc4 cxxbridge1$str$ptr + 2906808
+15  libsystem_pthread.dylib             0x000000018255fbc8 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000018255ab80 thread_start + 8

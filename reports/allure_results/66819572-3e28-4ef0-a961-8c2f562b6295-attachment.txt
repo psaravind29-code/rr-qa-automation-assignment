@@ -1,0 +1,19 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [/Users/aravindsridharan/.wdm/drivers/chromedriver/mac64/142.0.7444.59/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+[33mWARNING [0m src.browser_setup:browser_setup.py:35 WebDriver Manager failed: [Errno 8] Exec format error: '/Users/aravindsridharan/.wdm/drivers/chromedriver/mac64/142.0.7444.59/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+[33mWARNING [0m src.browser_setup:browser_setup.py:47 Homebrew installation failed: Message: Unable to locate or obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+[32mINFO    [0m src.browser_setup:browser_setup.py:52  Using auto-detected ChromeDriver
+[32mINFO    [0m conftest:conftest.py:17  WebDriver initialized successfully
+[32mINFO    [0m test_negative:test_negative.py:11 Negative test setup completed
+[32mINFO    [0m test_negative:test_negative.py:33 Testing search with invalid title
+[32mINFO    [0m src.pages.discover_page:discover_page.py:24 Navigating to: https://tmdb-discover.surge.sh/
+[32mINFO    [0m src.pages.discover_page:discover_page.py:35 Searching for movie: invalid_movie_title_xyz123
+[32mINFO    [0m src.pages.discover_page:discover_page.py:63 Successfully searched for: invalid_movie_title_xyz123
+[32mINFO    [0m src.pages.discover_page:discover_page.py:115 🎬 Found 6 potential movie elements
+[32mINFO    [0m test_negative:test_negative.py:43 Invalid search shows 6 results
+[32mINFO    [0m test_negative:test_negative.py:48  Unexpected results for invalid search
+[32mINFO    [0m test_negative:test_negative.py:50  Invalid search test completed
+[32mINFO    [0m conftest:conftest.py:25  WebDriver closed

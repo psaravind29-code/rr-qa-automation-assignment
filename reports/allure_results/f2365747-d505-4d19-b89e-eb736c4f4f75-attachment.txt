@@ -1,0 +1,1 @@
+[33mWARNING [0m src.pages.discover_page:discover_page.py:68 No search box found with any selector
