@@ -1,22 +1,35 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import allure
-import os
 
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    """Setup Chrome driver"""
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--window-size=1920,1080")
+    
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver.implicitly_wait(10)
+    
     yield driver
     driver.quit()
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item):
+def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
     
     if report.when == "call" and report.failed:
-        # Take screenshot on failure
-        driver = item.funcargs['driver']
-        screenshot = driver.get_screenshot_as_png()
-        allure.attach(screenshot, name="screenshot", attachment_type=allure.attachment_type.PNG)
+        driver = item.funcargs.get('driver')
+        if driver:
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
